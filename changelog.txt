@@ -1,0 +1,23 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.0.3
+Date: 19.07.2025
+  Changes:
+    - renamed mod to `realistic-ruins-updated` and excluded previous mod name
+    - merged to latest `AbandonedRuins_updated_fork` mod changes
+---------------------------------------------------------------------------------------------------
+Version: 0.0.2
+Date: 25.02.2020
+  Info:
+    - prerelease
+  Bugfixes:
+    - bump AbandonedRuins to 1.1.3 with fluids support
+---------------------------------------------------------------------------------------------------
+Version: 0.0.1
+Date: 24.02.2020
+  Info:
+    - prerelease
+  Changes:
+    - add 32 small ruins
+    - add 3 medium ruins
+    - add 5 large ruins
+    - add thumbnail
