@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.4
+Date: 21.07.2025
+  Changes:
+    - bumped version of `AbandonedRuins_updated_fork` to 1.3.2 (latest remote-call function)
+    - remove hard-coded setting of this mod's name to new remote-call function
+---------------------------------------------------------------------------------------------------
 Version: 0.0.3
 Date: 19.07.2025
   Changes:

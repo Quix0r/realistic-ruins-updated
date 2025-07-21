@@ -22,14 +22,7 @@ local function add(name, parent)
 end
 
 local function make_ruin_set()
-    local set = settings.global["current-ruin-set"]
-
-    set.default_value = "realistic"
-    if set.allowed_values == nil then
-        set.allowed_values = {"base"}
-    end
-
-    table.insert(set.allowed_values, "realistic")
+    remote.call("AbandonedRuins", "register_ruin_set", "realistic", true)
 
     if script.active_mods["AbandonedRuins-Krastorio2"] then
         table.insert(set.allowed_values, "realistic-krastorio")
