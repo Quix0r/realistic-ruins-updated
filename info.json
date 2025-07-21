@@ -1,9 +1,9 @@
 {
     "name": "realistic-ruins-updated",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "title": "Realistic Ruins - Updated to 2.0",
     "author": "roland77, dodo.the.last, Rob Ruin",
-    "homepage": "https://github.com/Quix0r/factorio-realistic-ruins",
+    "homepage": "https://github.com/Quix0r/realistic-ruins-updated",
     "factorio_version": "2.0",
     "description": "realistic ruins and crashsites",
     "dependencies": [

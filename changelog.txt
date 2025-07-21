@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.5
+Date: 21.07.2025
+  Features:
+    - added German locale
+  Bugfixes:
+    - updating configuration over `remote.call()` didn't work as expected. The mod was never added
+      as Factorio seem to not update its mod settings GUI and there is no `GUI.refresh()` or so
+    - removed redundant (and wrong) check on if `name` is an active mod
+    - use "register_ruin_set" instead of hard-coded settings update (Krastorio2 ruins)
+---------------------------------------------------------------------------------------------------
 Version: 0.0.4
 Date: 21.07.2025
   Changes:
