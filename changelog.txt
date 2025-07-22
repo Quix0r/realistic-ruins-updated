@@ -1,5 +1,11 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.5
+Date: 22.07.2025
+  Bugfixes:
+    - fixed crash (missing closing brace)
+    - `register_ruin_set` is the proper name
+---------------------------------------------------------------------------------------------------
+Version: 0.0.5
 Date: 21.07.2025
   Features:
     - added German locale
