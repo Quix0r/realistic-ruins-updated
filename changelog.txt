@@ -1,5 +1,11 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.0.5
+Version: 0.0.7
+Date: 27.07.2025
+  Bugfixes:
+    - renamed "*rock-*" to "*-*rock", e.g. "sand-rock-medium" has been renamed to
+      "medium-sand-rock", et cetera
+---------------------------------------------------------------------------------------------------
+Version: 0.0.6
 Date: 22.07.2025
   Bugfixes:
     - fixed crash (missing closing brace)

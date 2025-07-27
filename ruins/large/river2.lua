@@ -43,7 +43,7 @@ return
     {"tree-04", {x = -9.62, y = 1.13}, {}},
     {"tree-05", {x = -2.17, y = 2.3}, {}},
     {"tree-07", {x = -0.65, y = 0.54}, {}},
-    {"rock-big", {x = 14.67, y = 1.56}, {}},
+    {"big-rock", {x = 14.67, y = 1.56}, {}},
     {"tree-05", {x = -9.42, y = 2.47}, {}},
     {"tree-08", {x = 1.52, y = 3.37}, {}},
     {"tree-08", {x = 5.18, y = 3.2}, {}},
@@ -751,7 +751,7 @@ return
   },
   decoratives =
   {
-    {"sand-rock-medium", {x = -14, y = -15}, 1},
+    {"medium-sand-rock", {x = -14, y = -15}, 1},
     {"brown-fluff-dry", {x = -5, y = -15}, 1},
     {"brown-fluff-dry", {x = -10, y = -13}, 1},
     {"green-desert-bush", {x = 0, y = -13}, 1},
@@ -855,7 +855,7 @@ return
     {"green-hairy-grass", {x = -4, y = -6}, 7},
     {"green-croton", {x = -4, y = -6}, 2},
     {"green-hairy-grass", {x = -3, y = -6}, 5},
-    {"rock-medium", {x = -3, y = -6}, 1},
+    {"medium-rock", {x = -3, y = -6}, 1},
     {"green-hairy-grass", {x = -4, y = -5}, 3},
     {"green-croton", {x = 0, y = -6}, 1},
     {"green-hairy-grass", {x = 1, y = -6}, 1},
