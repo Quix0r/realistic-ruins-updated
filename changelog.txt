@@ -1,4 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.8
+Date: 28.07.2025
+  Bugfixes:
+    - if "base" ruin-set isn't loaded, required table keys like "small", etc. are missing
+    - so let's initialize them "on-the-fly"
+  Minor:
+    - loaded `constants.lua` file for having configuration key for debug log messages
+    - added more debug messages
+    - added optional dependency on `AbandonedRuins-base` mod
+    - removed paths from `require()` commands while relative paths or only file does work, too
+---------------------------------------------------------------------------------------------------
 Version: 0.0.7
 Date: 27.07.2025
   Bugfixes:
