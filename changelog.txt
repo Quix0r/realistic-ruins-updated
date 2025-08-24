@@ -1,7 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.11
+Date: 2025-08-24
+  Dependencies:
+    - replace `fire-place` (deprecated anyway) with `wip-fire-place` (maintained by myself)
+---------------------------------------------------------------------------------------------------
 Version: 0.0.10
 Date: 2025-08-24
-  Minor:
+  Dependencies:
     - bumped version number of `AbandonedRuins_updated_fork` to 1.4.0 which has introduced
       breaking changes
 ---------------------------------------------------------------------------------------------------
