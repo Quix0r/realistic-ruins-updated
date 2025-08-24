@@ -1,6 +1,6 @@
 {
     "name": "realistic-ruins-updated",
-    "version": "0.0.8",
+    "version": "0.0.10",
     "title": "Realistic Ruins - Updated to 2.0",
     "author": "roland77, dodo.the.last, Rob Ruin",
     "homepage": "https://github.com/Quix0r/realistic-ruins-updated",
@@ -8,9 +8,9 @@
     "description": "realistic ruins and crashsites",
     "dependencies": [
         "base >= 2.0.60",
-        "AbandonedRuins_updated_fork >= 1.3.2",
+        "AbandonedRuins_updated_fork >= 1.4.0",
         "!realistic-ruins",
-        "? AbandonedRuins-base >= 0.1.0",
+        "? AbandonedRuins-base >= 0.1.2",
         "? AbandonedRuins-Krastorio2",
         "? RealisticReactors >= 4.0.0",
         "? factorio-crash-site",

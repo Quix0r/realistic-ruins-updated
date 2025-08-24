@@ -46,6 +46,7 @@ end
 
 local function make_ruin_set()
   if debug_log then log("[make_ruin_set]: CALLED!") end
+
   add("realistic", "base")
 
   if script.active_mods["AbandonedRuins-Krastorio2"] then

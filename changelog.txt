@@ -1,4 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.10
+Date: 2025-08-24
+  Minor:
+    - bumped version number of `AbandonedRuins_updated_fork` to 1.4.0 which has introduced
+      breaking changes
+---------------------------------------------------------------------------------------------------
+Version: 0.0.9
+Date: 06.08.2025
+  Minor:
+    - bumped mandatory depency `AbandonedRuins_updated_fork` to latest minor 17
+    - added more ignored files/directories by git, e.g. `.DS_Store` is purely from MacOS
+---------------------------------------------------------------------------------------------------
 Version: 0.0.8
 Date: 28.07.2025
   Bugfixes:
