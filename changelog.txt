@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.0
+Date: 2025-11-24
+  Rewrite:
+    - rewritten ruin loading towards having the ruin's name being stored, this is the recommended
+      way for later easier debugging, e.g. finding a broken ruin
+---------------------------------------------------------------------------------------------------
 Version: 0.0.11
 Date: 2025-08-24
   Dependencies:

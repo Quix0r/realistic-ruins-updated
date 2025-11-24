@@ -1,37 +1,48 @@
-local ruins = {
-    ["base"               ] = {},
-    ["fire-place"         ] = {},
-    ["factorio-crash-site"] = {},
-    ["RealisticReactors"  ] = {},
-}
+-- A "list" of ruins, including their names
+--- @type Ruin[]
+local ruins = {}
 
-local function add(ruins, n, name)
-    for i = 1, n do
-        table.insert(ruins, require(string.format(name, i)))
-    end
+-- Insert all ruins
+for _, name in pairs({
+	"burner-generator",
+	"camp-cold",
+	"camp-fire",
+	"camp-trap",
+	"corpse",
+	"crash-10-ship-part",
+	"crash-11-ship-part",
+	"crash-1-chest",
+	"crash-1-damaged-assembling-machine",
+	"crash-1-damaged-lab",
+	"crash-1-generator",
+	"crash-1-repaired-assembling-machine",
+	"crash-1-repaired-lab",
+	"crash-1-ship-part",
+	"crash-1-ship-wreck",
+	"crash-2-chest",
+	"crash-2-damaged-assembling-machine",
+	"crash-2-repaired-assembling-machine",
+	"crash-2-ship-part",
+	"crash-2-ship-wreck",
+	"crash-3-ship-part",
+	"crash-3-ship-wreck",
+	"crash-4-ship-part",
+	"crash-4-ship-wreck",
+	"crash-5-ship-part",
+	"crash-5-ship-wreck",
+	"crash-6-ship-part",
+	"crash-7-ship-part",
+	"crash-8-ship-part",
+	"crash-9-ship-part",
+	"radioactive-sarcophagus",
+	"radioactive-waste-storage"
+}) do
+	if debug_log then log(string.format("Loading name='%s' ...", name)) end
+
+	---@type Ruin Individual ruin, file' name becomes ruin's name
+	local ruin = require(name)
+	ruin.name = name
+	table.insert(ruins, ruin)
 end
-
--- base
-table.insert(ruins["base"], require("burner-generator"))
-table.insert(ruins["base"], require("corpse"))
-add(ruins["base"], 5, "crash-%d-ship-wreck")
-add(ruins["base"], 11, "crash-%d-ship-part")
-
--- fire-place
-table.insert(ruins["fire-place"], require("camp-cold"))
-table.insert(ruins["fire-place"], require("camp-trap"))
-table.insert(ruins["fire-place"], require("camp-fire"))
-
--- factorio-crash-site
-add(ruins["factorio-crash-site"], 2, "crash-%d-chest")
-add(ruins["factorio-crash-site"], 1, "crash-%d-generator")
-add(ruins["factorio-crash-site"], 1, "crash-%d-damaged-lab")
-add(ruins["factorio-crash-site"], 1, "crash-%d-repaired-lab")
-add(ruins["factorio-crash-site"], 2, "crash-%d-damaged-assembling-machine")
-add(ruins["factorio-crash-site"], 2, "crash-%d-repaired-assembling-machine")
-
--- RealisticReactors
-table.insert(ruins["RealisticReactors"], require("radioactive-waste-storage"))
-table.insert(ruins["RealisticReactors"], require("radioactive-sarcophagus"))
 
 return ruins

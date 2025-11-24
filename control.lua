@@ -30,9 +30,9 @@ local function add(name, parent)
     end
 
     if debug_log then log(string.format("[add]: Checking %d ruin-sets for size='%s' ...", table_size(ruin_set), size)) end
-    for name, rest in pairs(ruin_set) do
-      if debug_log then log(string.format("[add]: name='%s',rest()=%d", name, table_size(rest))) end
-      for _, ruin in ipairs(rest) do
+    for name, ruins in pairs(ruin_set) do
+      if debug_log then log(string.format("[add]: name='%s',ruins()=%d", name, table_size(ruins))) end
+      for _, ruin in ipairs(ruins) do
         if debug_log then log(string.format("[add]: Adding ruin[]='%s' for size='%s' ...", type(ruin), size)) end
         table.insert(ruins[size], ruin)
       end
