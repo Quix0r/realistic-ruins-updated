@@ -1,9 +1,10 @@
 local constants = require("__AbandonedRuins_updated_fork__/lua/constants")
 
+---@type bool
+debug_log = settings.global[constants.ENABLE_DEBUG_LOG_KEY].value
+
 ---@type table<string, RuinSet>
 local ruin_sets = require("ruins/ruin_set")
-
-debug_log = settings.global[constants.ENABLE_DEBUG_LOG_KEY].value
 
 local function add(name, parent)
   if debug_log then log(string.format("[add]: name='%s',parent='%s' - CALLED!", name, parent)) end
@@ -30,8 +31,8 @@ local function add(name, parent)
     end
 
     if debug_log then log(string.format("[add]: Checking %d ruin-sets for size='%s' ...", table_size(ruin_set), size)) end
-    for name, ruins in pairs(ruin_set) do
-      if debug_log then log(string.format("[add]: name='%s',ruins()=%d", name, table_size(ruins))) end
+    for _, ruins in pairs(ruin_set) do
+      if debug_log then log(string.format("[add]: ruin_set.name='%s',ruins()=%d", ruin_set.name, table_size(ruins))) end
       for _, ruin in ipairs(ruins) do
         if debug_log then log(string.format("[add]: Adding ruin[]='%s' for size='%s' ...", type(ruin), size)) end
         table.insert(ruins[size], ruin)
@@ -39,6 +40,7 @@ local function add(name, parent)
     end
   end
 
+  if debug_log then log(string.format("[add]: Invoking remote.call(AbandonedRuins, add_ruin_sets, %s, ruins[]='%s') ...", name, type(ruins))) end
   remote.call("AbandonedRuins", "add_ruin_sets", name, ruins)
 
   if debug_log then log("[add]: EXIT!") end

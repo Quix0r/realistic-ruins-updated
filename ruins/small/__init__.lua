@@ -42,7 +42,8 @@ for _, name in pairs({
 	---@type Ruin Individual ruin, file' name becomes ruin's name
 	local ruin = require(name)
 	ruin.name = name
-	table.insert(ruins, ruin)
+	ruins[#ruins] = ruin
 end
 
+if debug_log then log(string.format("Loaded %d ruins ...", #ruins)) end
 return ruins

@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.1
+Date: 2025-11-27
+  Changes:
+    - let's not use `table.insert()` anymore when `foos[#foos] = foo` is enough and possibly faster
+  Fixed:
+    - initialize `debug_log` before loading ruins
+---------------------------------------------------------------------------------------------------
 Version: 0.1.0
 Date: 2025-11-24
   Rewrite:
