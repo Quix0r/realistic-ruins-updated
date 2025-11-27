@@ -4,7 +4,7 @@ local constants = require("__AbandonedRuins_updated_fork__/lua/constants")
 debug_log = settings.global[constants.ENABLE_DEBUG_LOG_KEY].value
 
 ---@type table<string, RuinSet>
-local ruin_sets = require("ruins/ruin_set")
+local loaded_sets = require("ruins/ruin_set")
 
 local function add(name, parent)
   if debug_log then log(string.format("[add]: name='%s',parent='%s' - CALLED!", name, parent)) end
@@ -21,22 +21,19 @@ local function add(name, parent)
     end
   end
 
-  if debug_log then log(string.format("[add]: Checking %d ruin-sets ...", table_size(ruin_sets))) end
-  for size, ruin_set in pairs(ruin_sets) do
-    if debug_log then log(string.format("[add]: size='%s',ruin_set[]='%s'", size, type(ruin_set))) end
+  if debug_log then log(string.format("[add]: Checking %d ruin-sets ...", table_size(loaded_sets))) end
+  for size, ruin_sets in pairs(loaded_sets) do
+    if debug_log then log(string.format("[add]: size='%s',ruin_sets[]='%s'", size, type(ruin_sets))) end
     if ruins[size] == nil then
       -- Initialize table
       if debug_log then log(string.format("[add]: Table for size='%s' not found, initializing ...", size)) end
       ruins[size] = {}
     end
 
-    if debug_log then log(string.format("[add]: Checking %d ruin-sets for size='%s' ...", table_size(ruin_set), size)) end
-    for _, ruins in pairs(ruin_set) do
-      if debug_log then log(string.format("[add]: ruin_set.name='%s',ruins()=%d", ruin_set.name, table_size(ruins))) end
-      for _, ruin in ipairs(ruins) do
-        if debug_log then log(string.format("[add]: Adding ruin[]='%s' for size='%s' ...", type(ruin), size)) end
-        table.insert(ruins[size], ruin)
-      end
+    if debug_log then log(string.format("[add]: Checking %d ruin-sets for size='%s' ...", table_size(ruin_sets), size)) end
+    for _, ruin in ipairs(ruin_sets) do
+      if debug_log then log(string.format("[add]: Adding ruin.name='%s' for size='%s' ...", ruin.name, size)) end
+      table.insert(ruins[size], ruin)
     end
   end
 
