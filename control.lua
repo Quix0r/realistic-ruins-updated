@@ -1,7 +1,8 @@
+-- Load AR libs
 local constants = require("__AbandonedRuins_updated_fork__/lua/constants")
 
 ---@type bool
-debug_log = settings.global[constants.ENABLE_DEBUG_LOG_KEY].value
+local debug_log = settings.global[constants.ENABLE_DEBUG_LOG_KEY].value
 
 ---@type table<string, RuinSet>
 local loaded_sets = require("ruins/ruin_set")

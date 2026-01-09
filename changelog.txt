@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.3
+Date: 2026-01-09
+  Changes:
+    - bumped AR minimum version due to API changes
+    - bumped Factorio version to latest patch level
+    - *use locals` for performance reasons, LUA hashes global variable names, locals not
+---------------------------------------------------------------------------------------------------
 Version: 0.1.2
 Date: 2025-11-27
   Changes:
