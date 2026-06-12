@@ -1218,4 +1218,9 @@ return
     {"brown-carpet-grass", {x = -5, y = 14}, 1},
     {"garballo-mini-dry", {x = 10, y = 14}, 1},
   },
+  no_spawning =
+  {
+    fulgora = true,
+    vulcanus = true
+  },
 }

@@ -1564,4 +1564,9 @@ return
     {"brown-hairy-grass", {x = 9, y = 14}, 1},
     {"red-pita", {x = 12, y = 14}, 1},
   },
+  no_spawning =
+  {
+    fulgora = true,
+    vulcanus = true
+  },
 }
