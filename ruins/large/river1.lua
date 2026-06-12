@@ -1051,4 +1051,9 @@ return
     {"green-hairy-grass", {x = 14, y = 14}, 1},
     {"brown-asterisk-mini", {x = 16, y = 7}, 3},
   },
+  no_spawning =
+  {
+    fulgora = true,
+    vulcanus = true
+  },
 }
